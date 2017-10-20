@@ -70,4 +70,4 @@ pridebot.on('message', message => {
   
 });
 // Token for bot to run
-playstore.login(process.env.BOT_TOKEN);
+pridebot.login(process.env.BOT_TOKEN);
