@@ -31,7 +31,7 @@ pridebot.on('message', message => {
     message.author.sendMessage("List of commands:");
     message.author.sendMessage("``pc.say (Says what you tell it to.)``");
     message.author.sendMessage("``pc.info (updates pretty much.)``");
-    message.author.sendMessage("``pc.website (Says the website of playsales.)``");
+    message.author.sendMessage("``pc.website (Says the website of pridecraft.)``");
     message.author.sendMessage("``pc.avatar (Posts a pic of your profile pic.)``");
     message.author.sendMessage("``pc.invite (Join my home discord server!)``");
     message.author.sendMessage("``pc.ping (Shows how fast the bot is.)``");
