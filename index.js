@@ -3,7 +3,7 @@ const pridebot = new Discord.Client();
 const config = require("./config.json");
 
 pridebot.on('ready', () => {
-  console.log(`Bot has started, with ${pridebot.users.size} users, in ${pridebot.channels.size} channels of ${playstore.guilds.size} guilds.`);
+  console.log(`Bot has started, with ${pridebot.users.size} users, in ${pridebot.channels.size} channels of ${pridebot.guilds.size} guilds.`);
   console.log(`Logged in as ${pridebot.user.tag}!`);
   console.log(`PrideBot is online`);
 
