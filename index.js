@@ -1,16 +1,16 @@
 const Discord = require("discord.js");
-const playstore = new Discord.Client();
+const pridebot = new Discord.Client();
 const config = require("./config.json");
 
-playstore.on('ready', () => {
-  console.log(`Bot has started, with ${playstore.users.size} users, in ${playstore.channels.size} channels of ${playstore.guilds.size} guilds.`);
-  console.log(`Logged in as ${playstore.user.tag}!`);
-  console.log(`PlayStores is online`);
+pridebot.on('ready', () => {
+  console.log(`Bot has started, with ${pridebot.users.size} users, in ${pridebot.channels.size} channels of ${playstore.guilds.size} guilds.`);
+  console.log(`Logged in as ${pridebot.user.tag}!`);
+  console.log(`PrideBot is online`);
 
-playstore.user.setGame(`ps.h | http://thegaming.services | Currently in ${playstore.guilds.size} Servers`);
+pridebot.user.setGame(`pc.h Currently in ${pridebot.guilds.size} Servers`);
 });
  // Prefix settings
-playstore.on('message', message => {
+pridebot.on('message', message => {
   if(message.author.bot) return;
   if(!message.content.startsWith(config.prefix)) return;
 
@@ -29,12 +29,12 @@ playstore.on('message', message => {
   
   if (command === "h") {
     message.author.sendMessage("List of commands:");
-    message.author.sendMessage("``ps.say (Says what you tell it to.)``");
-    message.author.sendMessage("``ps.info (updates pretty much.)``");
-    message.author.sendMessage("``ps.website (Says the website of playsales.)``");
-    message.author.sendMessage("``ps.avatar (Posts a pic of your profile pic.)``");
-    message.author.sendMessage("``ps.invite (Join my home discord server!)``");
-    message.author.sendMessage("``ps.ping (Shows how fast the bot is.)``");
+    message.author.sendMessage("``pc.say (Says what you tell it to.)``");
+    message.author.sendMessage("``pc.info (updates pretty much.)``");
+    message.author.sendMessage("``pc.website (Says the website of playsales.)``");
+    message.author.sendMessage("``pc.avatar (Posts a pic of your profile pic.)``");
+    message.author.sendMessage("``pc.invite (Join my home discord server!)``");
+    message.author.sendMessage("``pc.ping (Shows how fast the bot is.)``");
     message.reply("I'm sending you the help list right now!");
   }
   
@@ -44,11 +44,11 @@ playstore.on('message', message => {
   }
   
   if (command === "website") {
-    message.channel.sendMessage("Website: http://thegaming.services");
+    message.channel.sendMessage("Website: (soon)");
   }
  
   if (command === "info") {
-    message.channel.sendMessage("ps.serverinfo | Adding soon! |");
+    message.channel.sendMessage("pc.serverinfo | Adding soon |");
   }
   // Shows persons profile picture
   if (command === "avatar") {
@@ -56,11 +56,11 @@ playstore.on('message', message => {
   }
   
   if (command === "support") {
-    message.author.sendMessage("Join for support: https://discord.gg/smUv2NJ");
+    message.author.sendMessage("Join for support: (soon)");
   }
   
   if (command === "invite") {
-    message.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=369956217977700353&scope=bot&permissions=0");
+    message.author.sendMessage("(Soon)");
     message.reply("Adding me to another server ? Make sure to pass it on <3");
   }
   // Working ping code
