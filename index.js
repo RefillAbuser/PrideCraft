@@ -27,42 +27,7 @@ pridebot.on('message', message => {
     message.channel.sendMessage(total);
 
   }
-  
-  class BlockodNetworkCommand extends commando.Command {
-      constructor(client) {
-          super(client, {
-           name: "blockodenetwork",
-           aliases: ["bn"],
-           group: "misc",
-           memberName: "blockodenetwork",
-           description: "Tells you all about The Blockode Network."
-        })
-      }
-      
-      async run(message, args) {
-           message.channel.send({embed: {
-               color: 0xc409b4,
-               title: "The Blockode Network",
-               url: "https://www.youtube.com",
-               description: "Her is some information upon The Blockode Network.",
-               fields: [{
-                   name: "About",
-                   value: "Enther a world not like any other before, dark forces are at work and they plan to destroy the realm as we know it full of strange creature",
-                 },
-                 {
-                   name: "Link",
-                   value: "Discord Server  We hope to see you around"
-                 }
-               ],
-               timestamp: new Date(),
-               footer: {
-                 text: "Blockode Network, All Rights Reserved."
-               }
-             }
-           });
-       }
-   }
-       // list of shit
+     // list of shit
   if (command === "say") {
     message.channel.sendMessage(args.join(" "));
   }
