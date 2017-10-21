@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+const commando = require("discord.js-commando");
 const pridebot = new Discord.Client();
 const config = require("./config.json");
 
@@ -27,18 +28,41 @@ pridebot.on('message', message => {
 
   }
   
-  if (command === "h") {
-    message.author.sendMessage("List of commands:");
-    message.author.sendMessage("``pc.say (Says what you tell it to.)``");
-    message.author.sendMessage("``pc.info (updates pretty much.)``");
-    message.author.sendMessage("``pc.website (Says the website of pridecraft.)``");
-    message.author.sendMessage("``pc.avatar (Posts a pic of your profile pic.)``");
-    message.author.sendMessage("``pc.invite (Join my home discord server!)``");
-    message.author.sendMessage("``pc.ping (Shows how fast the bot is.)``");
-    message.reply("I'm sending you the help list right now!");
-  }
-  
-  // list of shit
+  class BlockodNetworkCommand extends commando.Command {
+      constructor(client) {
+          super(client, {
+           name: "blockodenetwork",
+           aliases: ["bn"],
+           group: "misc",
+           memberName: "blockodenetwork",
+           description: "Tells you all about The Blockode Network."
+        })
+      }
+      
+      async run(message, args) {
+           message.channel.send({embed: {
+               color: 0xc409b4,
+               title: "The Blockode Network",
+               url: "https://www.youtube.com",
+               description: "Her is some information upon The Blockode Network.",
+               fields: [{
+                   name: "About",
+                   value: "Enther a world not like any other before, dark forces are at work and they plan to destroy the realm as we know it full of strange creature",
+                 },
+                 {
+                   name: "Link",
+                   value: "Discord Server  We hope to see you around"
+                 }
+               ],
+               timestamp: new Date(),
+               footer: {
+                 text: "Blockode Network, All Rights Reserved."
+               }
+             }
+           });
+       }
+   }
+       // list of shit
   if (command === "say") {
     message.channel.sendMessage(args.join(" "));
   }
