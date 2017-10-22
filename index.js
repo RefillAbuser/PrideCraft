@@ -61,15 +61,6 @@ pridebot.on('message', message => {
       message.reply("Need a role created called (BotTrusted) and have it assigned to you!")
     }
   }
-  // Ping Permission for supporter
-  if (command === "ping") {
-     let modRole = message.guild.roles.find("name", "SUPPORT");
-     if(message.member.roles.has(modRole.id)) {
-      message.channel.sendMessage('Pong! Your ping is `' + `${Date.now() - message.createdTimestamp}` + ' ms`');
-     } else {
-      message.reply("Need a role created called (BotTrusted) and have it assigned to you!")
-    }
-  }
   
 });
 // Token for bot to run
