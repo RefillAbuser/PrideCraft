@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const commando = require("discord.js-commando");
 const pridebot = new Discord.Client();
 const config = require("./config.json");
 
