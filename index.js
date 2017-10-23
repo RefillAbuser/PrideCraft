@@ -4,8 +4,7 @@ const config = require("./config.json");
 const memecord = require('memecord');
  
 const client = new memecord.Client({
-    token: 'your token here',
-    ownerID: '277411860125581312',
+    ownerID: '340861561809797120',
     prefix: 'meme!',
     logLevel: 'VERBOSE'
 });
