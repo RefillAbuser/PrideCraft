@@ -51,9 +51,8 @@ pridebot.on('message', message => {
     let modRole = message.guild.roles.find("name", "Member");
     if(message.member.roles.has(modRole.id)) {
     message.author.sendMessage("https://discordapp.com/oauth2/authorize?client_id=371044552183906305&scope=bot&permissions=0");
-    message.reply("Adding me to another server ? Make sure to pass it on <3");
     } else {
-     message.reply("Need the Member role applyed to your account!")
+     message.reply("Need the Member role applyed to your account!");
    }
  }
   // Working ping code
