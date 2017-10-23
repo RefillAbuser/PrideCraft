@@ -1,13 +1,6 @@
 const Discord = require("discord.js");
 const pridebot = new Discord.Client();
 const config = require("./config.json");
-const memecord = require('memecord');
- 
-const client = new memecord.Client({
-    ownerID: '340861561809797120',
-    prefix: 'meme!',
-    logLevel: 'VERBOSE'
-});
 
 pridebot.on('ready', () => {
   console.log(`Bot has started, with ${pridebot.users.size} users, in ${pridebot.channels.size} channels of ${pridebot.guilds.size} guilds.`);
@@ -72,19 +65,6 @@ pridebot.on('message', message => {
       message.reply("Need a role created called (BotTrusted) and have it assigned to you!")
     }
   }
-  
-const someCommand = new memecord.Command({
-  names: ['meme', 'memes'],
-  description: 'Sends a random meme',
-  cooldown: 1000,
-  run: function(message) {
-    message.channel.send('Error 404: Meme not found');
-  }
-});
- 
-pridecraft.registerCommand(someCommand);
- 
-pridecraft.run();
   
 });
 // Token for bot to run
